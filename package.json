@@ -1,0 +1,27 @@
+{
+  "name": "gpt-2-slack-bot",
+  "version": "0.0.1",
+  "description": "A GPT-2 Bot that connects to Slack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@runwayml/hosted-models": "^0.2.0",
+    "@slack/web-api": "^5.8.0",
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://runwayml.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "runwayml",
+    "gpt2",
+    "slack"
+  ]
+}
