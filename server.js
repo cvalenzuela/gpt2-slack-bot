@@ -1,4 +1,5 @@
 // A GPT-2 Bot in Slack using RunwayML
+// Check out the tutorial: https://medium.com/@cris_62635/creating-a-custom-gpt-2-slack-bot-with-runwaymls-hosted-models-c639fe135379
 
 const { HostedModel } = require('@runwayml/hosted-models');
 const { WebClient } = require("@slack/web-api");
@@ -12,23 +13,21 @@ const web = new WebClient(process.env.SLACK_TOKEN);
 // Add your own hosted model URL in the following line:
 const model = new HostedModel({
   url: "https://gpt-2-57ea133e.hosted-models.runwayml.cloud/v1/",
-  token: process.env.GPT_2_API_KEY,
+  token: process.env.HOSTED_MODEL_TOKEN,
 });
 
 app.use(express.json());
 
 app.post("/", async (req, res) => { 
   const body = req.body;
-  const slackChannelId = body.event.channel; // Get the Slack channel ID
-  
   // Use the following line to verify our server with Slack.
-  // res.send(body.challenge); // IMPORTANT: Comment this out once verified!
+  // res.send(body.challenge); // IMPORTANT: Comment this out once the URL is verified in Slack!
   
   // --- Uncomment the lines 30-46 once your server is verified in Slack! ---
   // --- This is where we call our GPT-2 model! ---
 
   res.sendStatus(200); // Slack requires us to reply with a 200 status right after we get an incoming message
-
+     const slackChannelId = body.event.channel; // Get the Slack channel ID
   // Get the status of the model. Hosted Models may go to sleep after 5 minutes if they are not used.
   const isAwake = await model.isAwake();
 
