@@ -2,7 +2,7 @@
 
 ### Check out the [complete tutorial](https://medium.com/@cris_62635/creating-a-custom-gpt-2-slack-bot-with-runwaymls-hosted-models-c639fe135379) to get started.
 
-![demo](assets/demo.gif)
+![demo](assets/demo-image.gif)
 
 ## Glitch Version
 
