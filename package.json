@@ -9,7 +9,7 @@
   "dependencies": {
     "@runwayml/hosted-models": "^0.2.0",
     "@slack/web-api": "^5.8.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1"
   },
   "engines": {
